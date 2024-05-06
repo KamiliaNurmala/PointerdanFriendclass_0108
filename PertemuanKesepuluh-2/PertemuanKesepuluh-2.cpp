@@ -2,7 +2,7 @@
 using namespace std;
 
 class mahasiswa {
-public:
+public : 
 	int nim;
 	void showNim() {
 		cout << "No Induk = " << nim << endl;
@@ -10,15 +10,9 @@ public:
 };
 
 int main() {
-	mahasiswa mhs{1};
-	mhs.showNim();
-
-	mahasiswa refMhs = mhs;
-	refMhs.nim = 2;
-	mhs.showNim();
-
-	mahasiswa *pMhs = &mhs;
-	pMhs->nim = 3;
-	mhs.showNim();
+	mahasiswa* mhs = new mahasiswa{ 1 };
+	mhs->nim = 2;
+	mhs->showNim();
+	delete mhs;
 	return 0;
 }
